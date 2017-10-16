@@ -16,7 +16,9 @@ This java application requires MySQL Connector/J. You can download it from https
 Note: JIgmMegaRaid.jar already contains MySQL Connector/J.
 
 Create mysql user and mysql database for jimegaraidsas. You need to change database name, user name and password at JIgmMegaRaid.java:
+
 			MySQLHelper mSQL = new MySQLHelper("jimegaraidsas"); // change to your database schema
+			
 			mSQL.connect("jimegaraidsas", "jimegaraidsas"); // change to your database user and password
 
 
