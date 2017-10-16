@@ -9,9 +9,9 @@ from https://hwraid.le-vert.net/
 
 List supported hardware can be found at http://hwraid.le-vert.net/wiki/LSIMegaRAIDSAS
 
-Installation for Debian family can be found at http://hwraid.le-vert.net/wiki/DebianPackages
+Installation for debian family can be found at http://hwraid.le-vert.net/wiki/DebianPackages
 
-This java application requires MySQL Connector/J. You can download it from https://dev.mysql.com/downloads/connector/j/. 
+This java application requires MySQL (I used MySQL 5.7 Community Edition) and MySQL Connector/J. You can download it from https://dev.mysql.com/downloads/connector/j/. 
 
 Note: JIgmMegaRaid.jar already contains MySQL Connector/J.
 
