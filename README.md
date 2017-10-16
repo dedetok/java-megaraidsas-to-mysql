@@ -20,6 +20,7 @@ Create mysql user and mysql database for jimegaraidsas. You need to change datab
 To create database (for example with user jimegaraidsas
 
 $ mysql -u jimegaraidsas -p < jigmmegaraid.sql
+
 Enter password:
 
 
