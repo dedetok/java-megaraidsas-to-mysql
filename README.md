@@ -4,8 +4,11 @@ This java application requires (depend):
 1. megacli
 2. megactl
 3. megaraid-status
+
 from https://hwraid.le-vert.net/ 
+
 List supported hardware can be found at http://hwraid.le-vert.net/wiki/LSIMegaRAIDSAS
+
 Installation for Debian family can be found at http://hwraid.le-vert.net/wiki/DebianPackages
 
 Create mysql user and mysql database for jimegaraidsas. You need to change database name, user name and password at JIgmMegaRaid.java:
