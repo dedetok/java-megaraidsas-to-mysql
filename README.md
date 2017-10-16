@@ -11,13 +11,17 @@ List supported hardware can be found at http://hwraid.le-vert.net/wiki/LSIMegaRA
 
 Installation for Debian family can be found at http://hwraid.le-vert.net/wiki/DebianPackages
 
+
 Create mysql user and mysql database for jimegaraidsas. You need to change database name, user name and password at JIgmMegaRaid.java:
 			MySQLHelper mSQL = new MySQLHelper("jimegaraidsas"); // change to your database schema
 			mSQL.connect("jimegaraidsas", "jimegaraidsas"); // change to your database user and password
 
+
 To create database (for example with user jimegaraidsas
+
 $ mysql -u jimegaraidsas -p < jigmmegaraid.sql
 Enter password:
+
 
 To run
 # java -jar JIgmMegaRaid.jar
@@ -69,9 +73,13 @@ INFO: insert rawconfig 2: 1
 Oct 16, 2017 4:35:24 PM igam.JIgmMegaRaid main
 INFO: insert rawconfig 3: 1
 
+
 Create root cron to execute this java every sunday at 0:00
+
 0 0 * * sun /usr/bin/java -jar /root/java/JIgmMegaRaid.jar
 
+
 Log file can be found at /root/java/jigmmegaraid.log
+
 
 Todo: create PHP appliciation to show Mega Raid Status
