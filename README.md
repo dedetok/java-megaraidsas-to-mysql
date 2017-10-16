@@ -69,5 +69,6 @@ INFO: insert rawconfig 3: 1
 Create root cron to execute this java every sunday at 0:00
 0 0 * * sun /usr/bin/java -jar /root/java/JIgmMegaRaid.jar
 
+Log file can be found at /root/java/jigmmegaraid.log
 
 Todo: create PHP appliciation to show Mega Raid Status
