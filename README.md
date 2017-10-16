@@ -1,6 +1,6 @@
 # java-megaraidsas-to-mysql
 
-This java application requires (depend):
+This application requires (depend):
 1. megacli
 2. megactl
 3. megaraid-status
@@ -11,6 +11,9 @@ List supported hardware can be found at http://hwraid.le-vert.net/wiki/LSIMegaRA
 
 Installation for Debian family can be found at http://hwraid.le-vert.net/wiki/DebianPackages
 
+This java application requires MySQL Connector/J. You can download it from https://dev.mysql.com/downloads/connector/j/. 
+
+Note: JIgmMegaRaid.jar already contains MySQL Connector/J.
 
 Create mysql user and mysql database for jimegaraidsas. You need to change database name, user name and password at JIgmMegaRaid.java:
 			MySQLHelper mSQL = new MySQLHelper("jimegaraidsas"); // change to your database schema
