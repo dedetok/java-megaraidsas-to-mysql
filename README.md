@@ -88,7 +88,7 @@ Change sun to * if you wish to save raid status every day at 0:00
 Log file can be found at /root/java/jigmmegaraid.log
 
 
-To display in web, put raidinfo.php and raidinfodetail.php in any web folder. For example /var/www/html/.
+You need to install php, php mysql and web application (e.q apache2) to display mega raid status in web. After you all required software, put raidinfo.php and raidinfodetail.php in any web folder. For example /var/www/html/.
 
 
     This program is free software: you can redistribute it and/or modify
