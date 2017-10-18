@@ -83,11 +83,12 @@ Create root cron to execute this java every sunday at 0:00
 
 	0 0 * * sun /usr/bin/java -jar /root/java/JIgmMegaRaid.jar
 
+Change sun to * if you wish to save raid status every day at 0:00
 
 Log file can be found at /root/java/jigmmegaraid.log
 
 
-Todo: create PHP appliciation to show Mega Raid Status
+To display in web, put raidinfo.php and raidinfodetail.php in any web folder. For example /var/www/html/.
 
 
     This program is free software: you can redistribute it and/or modify
