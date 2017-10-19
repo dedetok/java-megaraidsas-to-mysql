@@ -38,12 +38,20 @@ if ($mysqli->connect_errno) {
 }
 
 $id = -1;
+// prevent mysql inject
+// sanitize input, we don't belive any input :) 
 if(isset($_GET["id"])){
 	$tmpID = $_GET["id"];
+	if (!ctype_digit($tmpID)) {
+		die('Illegal input');		
+	}
 	$id = intval($tmpID);
 }
 if(isset($_POST["id"])){
 	$tmpID = $_POST["id"];
+	if (!ctype_digit($tmpID)) {
+		die('Illegal input');		
+	}
 	$id = intval($tmpID);
 }
 
