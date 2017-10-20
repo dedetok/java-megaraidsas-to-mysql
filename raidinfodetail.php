@@ -155,7 +155,13 @@ for ($i=0;$i<$rows;$i++) {
 	<td><?php echo $t3; ?></td>
 	<td><?php echo $t4; ?></td>
 	<td><?php echo $t5; ?></td>
-	<td><?php echo $t6; ?></td>
+	<td valign="top"><?php
+        if (stripos($t6,'FAULT')===false) {
+            echo $t6; 
+        } else {
+            echo "<strong>".$t6."</strong>";
+        }?>
+	</td>
 </tr>
 </tbody>
 </table>
