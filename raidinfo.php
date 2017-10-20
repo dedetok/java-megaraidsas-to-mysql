@@ -106,7 +106,14 @@ if ($res) {
 	<td valign="top"><?php echo $row['t3']; ?></td>
 	<td valign="top"><?php echo $row['t4']; ?></td>
 	<td valign="top"><?php echo $row['t5']; ?></td>
-	<td valign="top"><?php echo $row['t6']; ?></td>
+	<td valign="top"><?php
+            $t6 = $row['t6'];
+            if (stripos($t6,'FAULT')===false) {
+                echo $t6; 
+            } else {
+                echo "<strong>".$t6."</strong>";
+            }?>
+	</td>
 </tr>
 
 <?php
