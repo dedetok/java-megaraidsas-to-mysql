@@ -67,6 +67,7 @@ public class JIgmMegaRaid {
 			 * `t6` VARCHAR(45) NULL,
 			 */
 			mQuery = "INSERT INTO rawcontroller(jilog_jiid, t1, t2, t3, t4, t5, t6) values (?,?,?,?,?,?,?);";
+			//mQuery = "INSERT INTO rawcontroller(jilog_jiid, t1, t2, t3, t4, t5) values (?,?,?,?,?,?);"; // ? 0.4.3
 			mNumUpdate = mSQL.executeUpdate(mQuery, mKey, mHelper.listController);
 			myLog.log(Level.INFO, "insert rawcontroller ok: "+Integer.toString(mNumUpdate)); // debug
 			
