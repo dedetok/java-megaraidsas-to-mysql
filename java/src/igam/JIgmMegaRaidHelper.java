@@ -111,29 +111,31 @@ public class JIgmMegaRaidHelper {
 
 					}
 				} else {
+					// Raid controller
+					// e.q: a0       PERC H710 Mini           bios:5.31.01_4.12.05. fw:3.130.05-1796 encl:1 ldrv:1  rbld:30% batt:good/3920mV/39C
 					StringTokenizer mST = new StringTokenizer(tmp);
 					String mS = "";
 					boolean isFirst = true;
 					while (mST.hasMoreElements()) {
 						String mNT = mST.nextToken();
 						int mInt = cString2Strings(mNT, raidControllerTag);
-						if (!(mST.hasMoreElements())) {
+						
+						if (isFirst) {
+							mS=mNT;
+						} else if (mInt<0) {
 							mS = mS + " "+ mNT;
-							listController.add(mS);							
 						} else if (mInt>=0) {
-							if (!isFirst) {
-								listController.add(mS);
-							} 
-							mS = mNT;
-
-						} else {
-							if (isFirst) {
-								mS = mNT;
-							} else {
-								mS = mS + " "+ mNT;
-							}
+							// found a new tag
+							listController.add(mS);
+							mS=mNT;							
 						}
+						if (!mST.hasMoreElements()) {
+							// last word
+							listController.add(mS);
+						}
+						
 						isFirst = false;
+						
 
 					}
 				}
