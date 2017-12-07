@@ -52,7 +52,7 @@ public class JIgmMegaRaid {
 			 *   `jidate` DATETIME NULL
 			 */
 			mQuery = "INSERT INTO jilog (jidate) values ('"+mDate+"');";
-			//myLog.log(Level.INFO, "SQL: "+mQuery); // debug
+			myLog.log(Level.INFO, "SQL: "+mQuery); // debug
 			mKey = mSQL.executeAutoIncrementSQL(mQuery);			
 			myLog.log(Level.INFO, "key is: "+Integer.toString(mKey)); // debug			
 			
@@ -66,8 +66,8 @@ public class JIgmMegaRaid {
 			 * `t5` VARCHAR(45) NULL,
 			 * `t6` VARCHAR(45) NULL,
 			 */
+			myLog.log(Level.INFO, "insert rawcontroller: "+Integer.toString(mHelper.listController.size())); // debug
 			mQuery = "INSERT INTO rawcontroller(jilog_jiid, t1, t2, t3, t4, t5, t6) values (?,?,?,?,?,?,?);";
-			//mQuery = "INSERT INTO rawcontroller(jilog_jiid, t1, t2, t3, t4, t5) values (?,?,?,?,?,?);"; // ? 0.4.3
 			mNumUpdate = mSQL.executeUpdate(mQuery, mKey, mHelper.listController);
 			myLog.log(Level.INFO, "insert rawcontroller ok: "+Integer.toString(mNumUpdate)); // debug
 			
